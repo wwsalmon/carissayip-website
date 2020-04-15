@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Spectral:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <link href='style.css' rel='stylesheet' type='text/css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    </head>
+    <body>
+        <div class='top-container' id='parallax-scene'>
+            <div class='banner-item' data-depth="0.2">
+                <div class='banner-item-inner'>
+                    <div class='banner-item-left'><span>#1</span></div>
+                    <div class='banner-item-right'>
+                        <span class='banner-main'>Rated American<br />Female Chess Player<br /></span>
+                        <span class='banner-small'>Since September 2019</span>
+                    </div>
+                </div>
+            </div>
+            <div class='banner-item' data-depth="0.6">
+                <div class='banner-item-inner'>
+                    <div class='banner-item-left'><span>#1</span></div>
+                    <div class='banner-item-right'>
+                        <span class='banner-main'>Rated American<br />Female Chess Player<br /></span>
+                        <span class='banner-small'>Since September 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var scene = document.getElementById('parallax-scene');
+                var parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+        </script>
+    </body>
+</html>

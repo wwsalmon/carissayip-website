@@ -1,0 +1,77 @@
+$darkred: #6e0028;
+$medred: #eb868d;
+$lightred: #ffcfcc;
+$gold: #ffb432;
+
+$banner-scale: 1.5;
+$banner-width: 300px * $banner-scale;
+$banner-height: 80px * $banner-scale;
+$banner-left-font: 36px * $banner-scale;
+$banner-right-font: 16px * $banner-scale;
+$banner-right-padding: 17px * $banner-scale;
+
+body{
+    margin: 0;
+}
+
+.top-container{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.banner-item-left{
+    width: $banner-height;
+    height: $banner-height;
+    background-color: $gold;
+    text-align: center;
+    font-size: $banner-left-font;
+    font-family: 'Rubik';
+    font-weight: 700;
+    line-height: $banner-height;
+}
+
+.banner-item-right{
+    box-sizing: border-box;
+    font-size: $banner-right-font;
+    padding: $banner-right-padding;
+    color: #fff;
+    line-height: 1.0;
+
+    .banner-main{
+        font-family: 'Rubik';
+        font-weight: 700;
+    }
+    
+    .banner-small{
+        font-family: 'Spectral';
+        font-style: italic;
+    }
+}
+
+.banner-item{
+    margin-left: calc(50% - #{$banner-width});
+    margin-top: calc(300px - #{$banner-height});
+
+    .banner-item-inner{
+        width: $banner-width;
+        height: $banner-height;
+        display: flex;
+        background: linear-gradient(90deg, $gold 0%, $darkred 100%);
+        position: relative;
+        z-index: 2;
+        box-shadow: -3px 3px 20px 0 rgba(0,0,0,0.2);
+    }
+
+    &:before{
+        content: '';
+        background-color: $lightred;
+        width: $banner-width;
+        height: 100%;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        z-index: 1;
+        box-shadow: -1px 1px 10px 0 rgba(0,0,0,0.1);
+    }
+}
