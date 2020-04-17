@@ -1,4 +1,90 @@
+$darkred: #6e0028;
+$medred: #eb868d;
+$lightred: #ffcfcc;
+$gold: #ffb432;
+
+$lightblue: #4DB7FF;
+$medblue: #0F4880;
+$darkblue: #0A3055;
+$slate: #34515E;
+
+$banner-scale: 1.2;
+$banner-width: 300px * $banner-scale;
+$banner-height: 80px * $banner-scale;
+$banner-left-font: 36px * $banner-scale;
+$banner-right-font: 16px * $banner-scale;
+$banner-right-padding: 17px * $banner-scale;
+$banner-main-font-size: 18px * $banner-scale;
+$banner-small-font-size: 12px * $banner-scale;
+
 body{
   margin: 0;
+  overflow-x: hidden;
 }
 
+.top-container{
+  width: 1500px;
+  background-color: $darkblue;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.banner-item-left{
+  width: $banner-height;
+  height: $banner-height;
+  background: linear-gradient(135deg, $slate 0%, $darkblue 100%);
+  color: #fff;
+  text-align: center;
+  font-size: $banner-left-font;
+  line-height: $banner-height;
+  font-family: 'Rubik';
+  font-weight: 700;
+}
+
+.banner-item-right{
+  box-sizing: border-box;
+  font-size: $banner-right-font;
+  padding: $banner-right-padding;
+  line-height: 1.0;
+
+  .banner-main{
+    font-family: 'Spectral';
+    font-size: $banner-main-font-size;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .banner-small{
+    font-family: 'Rubik';
+    font-size: $banner-small-font-size;
+    font-weight: 300;
+  }
+}
+
+.banner-item{
+  position: absolute;
+  display: inline-block;
+
+  .banner-item-inner{
+    background-color: #fff;
+    width: $banner-width;
+    height: $banner-height;
+    display: inline-flex;
+    position: relative;
+    z-index: 2;
+    box-shadow: -3px 3px 20px 0 rgba(0,0,0,0.2);
+  }
+
+  .banner-item-back{
+    width: $banner-width;
+    height: 100%;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    z-index: 1;
+    box-shadow: -1px 1px 10px 0 rgba(0,0,0,0.1);
+    background: linear-gradient(45deg, $lightblue 0%, $medblue 100%);
+  }
+}

@@ -6,8 +6,14 @@ require('inc/helper-functions.php');
 
 function cyip_script_enqueue()
 {
-    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/master.scss', array(), null, 'all');
-//    wp_enqueue_script('customjs', get_template_directory_uri() . '/js/section-dropdown.js', array('jquery'), null, true);
+    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/master.css', false, NULL, 'all' );
+    wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Spectral:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap', false, NULL, 'all' );
 }
 
 add_action('wp_enqueue_scripts', 'cyip_script_enqueue');
+
+function remove_admin_bar() {
+    show_admin_bar(false);
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');

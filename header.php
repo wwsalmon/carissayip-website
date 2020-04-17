@@ -7,4 +7,8 @@
     <title><?php echo wp_get_document_title(); ?></title>
 <?php
 date_default_timezone_set("America/New_York");
+wp_head();
 ?>
+
+</head>
+<body>
