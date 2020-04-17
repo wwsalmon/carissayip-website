@@ -1,72 +1,8 @@
-body {
-  margin: 0;
-}
-
-.top-container {
-  width: 100%;
-  height: 600px;
-  position: relative;
-}
-
-.banner-item-left {
-  width: 120px;
-  height: 120px;
-  background-color: #ffb432;
-  text-align: center;
-  font-size: 54px;
-  font-family: 'Rubik';
-  font-weight: 700;
-  line-height: 120px;
-}
-
-.banner-item-right {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 24px;
-  padding: 25.5px;
-  color: #fff;
-  line-height: 1.0;
-}
-
-.banner-item-right .banner-main {
-  font-family: 'Rubik';
-  font-weight: 700;
-}
-
-.banner-item-right .banner-small {
-  font-family: 'Spectral';
-  font-style: italic;
-}
-
-.banner-item {
-  margin-left: calc(50% - 450px);
-  margin-top: calc(300px - 120px);
-}
-
-.banner-item .banner-item-inner {
-  width: 450px;
-  height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: -webkit-gradient(linear, left top, right top, from(#ffb432), to(#6e0028));
-  background: linear-gradient(90deg, #ffb432 0%, #6e0028 100%);
-  position: relative;
-  z-index: 2;
-  -webkit-box-shadow: -3px 3px 20px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: -3px 3px 20px 0 rgba(0, 0, 0, 0.2);
-}
-
-.banner-item:before {
-  content: '';
-  background-color: #ffcfcc;
-  width: 450px;
-  height: 100%;
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  z-index: 1;
-  -webkit-box-shadow: -1px 1px 10px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: -1px 1px 10px 0 rgba(0, 0, 0, 0.1);
-}
-/*# sourceMappingURL=style.css.map */
+/*
+  Theme Name: Carissa Yip Template by Samson Zhang
+  Theme URI: https://github.com/wwsalmon/carissayip-website
+  Author: Samson Zhang
+  Author URI: https://www.samsonzhang.com/
+  Description: Website for IM Carissa Yip
+  Version: 0.1
+*/
