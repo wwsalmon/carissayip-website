@@ -1,0 +1,85 @@
+.top-container{
+    max-width: $fullwidth;
+    margin: 128px auto;
+    background-color: $darkblue;
+}
+
+.banner-item{
+    position: relative;
+    display: inline-block;
+
+    .banner-item-inner{
+        background-color: #fff;
+        width: $banner-width;
+        height: $banner-height;
+        display: inline-flex;
+        position: relative;
+        z-index: 2;
+        box-shadow: -3px 3px 20px 0 rgba(0,0,0,0.2);
+    }
+
+    .banner-item-back{
+        width: $banner-width;
+        height: 100%;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        z-index: 1;
+        box-shadow: -1px 1px 10px 0 rgba(0,0,0,0.1);
+        background: linear-gradient(45deg, $lightblue 0%, $medblue 100%);
+    }
+}
+
+.banner-item-left{
+    width: $banner-height;
+    height: $banner-height;
+    background: linear-gradient(135deg, $slate 0%, $darkblue 100%);
+    color: #fff;
+    text-align: center;
+    font-size: $banner-left-font;
+    line-height: $banner-height;
+    font-family: 'Rubik';
+    font-weight: 700;
+}
+
+.banner-item-right{
+    box-sizing: border-box;
+    font-size: $banner-right-font;
+    padding: $banner-right-padding;
+    line-height: 1.0;
+
+    .banner-main{
+        font-family: 'Spectral';
+        font-size: $banner-main-font-size;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .banner-small{
+        font-family: 'Rubik';
+        font-size: $banner-small-font-size;
+        font-weight: 300;
+    }
+}
+
+@media (min-width: 1000px){
+    .top-container{
+        height: 800px;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+
+    .banner-item{
+        position: absolute;
+    }
+}
+
+@media (max-width: 1000px){
+    .banner-item{
+        margin-top: 32px;
+        left: calc(50% - #{$banner-width / 2})!important;
+        top: unset!important;
+        right: unset!important;
+        bottom: unset!important;
+    }
+}
