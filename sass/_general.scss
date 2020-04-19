@@ -17,14 +17,18 @@ $banner-right-font: 16px * $banner-scale;
 $banner-right-padding: 17px * $banner-scale;
 $banner-main-font-size: 18px * $banner-scale;
 $banner-small-font-size: 12px * $banner-scale;
-$banner-offset: 90px;
 $hero-scale: 1.0;
 $hero-top-margin: 64px;
-$hero-compact-offset: 90px;
 
 $main-item-width: 800px;
 $main-bottom: 120px;
-$main-offset: 180px;
+
+$main-offset: -50px;
+$main-offset-increment: 24px;
+
+$item1-y: 450px;
+$item2-y: 170px;
+$item3-y: 290px;
 
 $fullwidth: 1500px;
 
