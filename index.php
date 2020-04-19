@@ -8,7 +8,7 @@ if (is_front_page()) {
     ?>
 
     <div class='top-container'>
-        <div class="top-container-inner" data-tilt data-tilt-max="5" data-tilt-scale="1.1">
+        <div class="top-container-inner" data-tilt data-tilt-max="5" data-tilt-scale="1.1" data-tilt-gyroscope="true">
             <div class="hero-text" style="transform: translateZ(-100px);">
                 <span id="hero2">International Master<br/></span>
                 <span id="hero1">Carissa Yip</span>
@@ -57,7 +57,10 @@ if (is_front_page()) {
             banner = allBanners.item(i);
             z1 = +banner.querySelector(".banner-item-inner").style.transform.replace(/[^\d.]/g, '');
             banner.querySelector(".banner-item-back").setAttribute("style", "transform: translateZ(" + (z1 - 5) + "px);");
-            console.log(banner, z1);
+        }
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { // from https://stackoverflow.com/questions/22680448/if-mobile-disable-certain-scripts/22680543
+            document.querySelector(".top-container-inner").vanillaTilt.destroy();
         }
     </script>
 
