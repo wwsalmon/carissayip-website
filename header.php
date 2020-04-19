@@ -14,7 +14,7 @@ wp_head();
 <body>
 <div class="navbar">
     <div class="navbar-inner">
-        <a href="">
+        <a href="<?php echo get_home_url() ?>">
             <div class="navbar-logo">
                 <div class="logo-top"><span>International Master</span></div>
                 <div class="logo-bottom"><span>Carissa Yip</span></div>

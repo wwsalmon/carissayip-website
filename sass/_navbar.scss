@@ -1,4 +1,4 @@
-@media (min-width: 600px){
+@media (min-width: $navbar-break){
 
   #hamburger{
     display: none;
@@ -15,7 +15,7 @@
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: $navbar-break){
   .navbar-inner{
     justify-content: center;
   }

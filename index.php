@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php get_header();
+
+if (is_home()){
+
+?>
 
 <div class='top-container'>
     <div class="top-container-inner" data-tilt data-tilt-max="5" data-tilt-full-page-listening>
@@ -47,4 +51,23 @@
     }
 </script>
 
-<?php get_footer(); ?>
+<?php } else{
+    while ( have_posts() ) : the_post();
+    if (get_the_title() == "Chess Against COVID"){
+        $cac = true;
+        ?>
+        <div class="covid-back"></div>
+        <?php
+    }
+    ?>
+    <div class="container <?php if ($cac) echo 'cac' ?>">
+        <h1><?php the_title(); ?></h1>
+        <?php
+            the_content();
+        endwhile; ?>
+    </div>
+
+<?php
+}
+
+get_footer(); ?>
