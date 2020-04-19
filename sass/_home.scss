@@ -17,6 +17,8 @@
 .banner-item{
     position: relative;
     display: inline-block;
+    left: calc(50% - #{$banner-width / 2});
+    margin-top: 32px;
 
     .banner-item-inner{
         background-color: #fff;
@@ -76,6 +78,20 @@
     }
 }
 
+@media (max-width: 720px){
+    #item3{
+        left: calc(50% - #{$banner-width / 2});
+    }
+
+    #item2{
+        left: calc(100% - #{$banner-width} - 12px);
+    }
+
+    #item1{
+        left: 24px;
+    }
+}
+
 .hero-text{
     margin-top: $hero-top-margin;
     text-align: center;
@@ -119,8 +135,23 @@
 
     .banner-item{
         position: absolute;
-        left: calc(50% - #{$banner-width / 2});
+        margin: unset;
         bottom: 0;
+    }
+
+    #item3{
+        margin-left: 24vw;
+        margin-bottom: -32px;
+    }
+
+    #item2{
+        margin-left: -22vw;
+        margin-bottom: -110px;
+    }
+
+    #item1{
+        margin-left: -22vw;
+        margin-bottom: 49vw;
     }
 }
 
