@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class='top-container' id='parallax-scene' data-tilt data-tilt-max="10" data-tilt-speed="50">
+<div class='top-container' id='parallax-scene' data-tilt data-tilt-max="5">
     <div class='banner-item' style="top: 70%; right: 30%;">
         <div class="banner-item-back"></div>
         <div class='banner-item-inner' style="transform: translateZ(60px);">

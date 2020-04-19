@@ -12,3 +12,20 @@ wp_head();
 
 </head>
 <body>
+<div class="navbar">
+    <div class="navbar-inner">
+        <a href="">
+            <div class="navbar-logo">
+                <div class="logo-top"><span>International Master</span></div>
+                <div class="logo-bottom"><span>Carissa Yip</span></div>
+            </div>
+        </a>
+        <div id="hamburger"><i class="fas fa-bars"></i></div>
+        <?php wp_nav_menu(array('theme_location' => 'primary')) ?>
+    </div>
+</div>
+<script>
+    document.getElementById('hamburger').addEventListener("click",function(){
+        document.querySelector('.menu-navbar-container').classList.toggle("open");
+    });
+</script>

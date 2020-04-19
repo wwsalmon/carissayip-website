@@ -17,16 +17,24 @@ $banner-right-padding: 17px * $banner-scale;
 $banner-main-font-size: 18px * $banner-scale;
 $banner-small-font-size: 12px * $banner-scale;
 
+$fullwidth: 1500px;
+
 body{
   margin: 0;
   overflow-x: hidden;
+  font-family: 'Rubik';
+}
+
+a{
+  color: unset;
+  text-decoration: unset;
 }
 
 .top-container{
-  width: 1500px;
+  width: $fullwidth;
   background-color: $darkblue;
   height: 800px;
-  margin: 0 auto;
+  margin: 128px auto;
   position: relative;
   transform-style: preserve-3d;
 }
