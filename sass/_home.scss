@@ -1,6 +1,5 @@
 .top-container{
-    max-width: $fullwidth;
-    margin: 0 auto;
+    width: 100%;
     padding: $navbar-height 0;
     background: linear-gradient(-45deg, $medblue 0%, $darkblue 100%);
 
@@ -9,6 +8,10 @@
         height: 100%;
         transform-style: preserve-3d;
     }
+}
+
+.top-container ~ .container{
+    margin-top: 0;
 }
 
 .banner-item{
@@ -52,7 +55,10 @@
 .banner-item-right{
     box-sizing: border-box;
     font-size: $banner-right-font;
-    padding: $banner-right-padding;
+    padding: 0 $banner-right-padding;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     line-height: 1.0;
 
     .banner-main{
@@ -63,22 +69,118 @@
     }
 
     .banner-small{
+        margin-top: 2px * $banner-scale;
         font-family: 'Rubik';
         font-size: $banner-small-font-size;
         font-weight: 300;
     }
 }
 
+.hero-text{
+    margin-top: $hero-top-margin;
+    text-align: center;
+}
+
+#hero1{
+    font-size: 60px * $hero-scale;
+    font-family: 'Spectral';
+    font-weight: 900;
+    line-height: 1.05;
+    color: rgba(255,255,255,0.3);
+}
+
+#hero2{
+    font-size: 20px * $hero-scale;
+    font-family: 'Rubik';
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.1);
+}
+
 @media (min-width: 1000px){
     .top-container{
-        height: 800px;
+        height: $top-container-height;
         position: relative;
     }
 
     .banner-item{
         position: absolute;
         left: calc(50% - #{$banner-width / 2});
-        top: calc(50% - #{$banner-height / 2});
+        bottom: 0;
+    }
+
+    .main-item{
+        position: absolute;
+        width: $main-item-width;
+        left: calc(50% - #{$main-item-width / 2});
+        bottom: $main-bottom;
+    }
+
+    #item3{
+        margin-left: 400px;
+        margin-bottom: $main-offset + $banner-offset + 20px;
+    }
+
+    #item2{
+        margin-left: -400px;
+        margin-bottom: $main-offset + $banner-offset - 100px;
+    }
+
+    #item1{
+        margin-left: -300px;
+        margin-bottom: $main-offset + $banner-offset + 180px;
+    }
+}
+
+@media (min-width: 1100px * $hero-scale){
+    #hero1{
+        font-size: 200px * $hero-scale;
+    }
+
+    #hero2{
+        font-size: 60px * $hero-scale;
+    }
+}
+
+@media (min-width: 1500px * $hero-scale){
+
+    #hero1{
+        font-size: 280px * $hero-scale;
+    }
+
+    #hero2{
+        font-size: 80px * $hero-scale;
+    }
+}
+
+@media (max-width: 1500px * $hero-scale){
+    .top-container{
+        height: $top-container-height - $hero-compact-offset;
+    }
+}
+
+@media (max-width: 1240px){
+    .main-item{
+        width: 60vw;
+        left: calc(50% - 30vw);
+    }
+
+    #item3{
+        margin-left: 30vw;
+    }
+
+    #item2{
+        margin-left: -30vw;
+    }
+
+    #item1{
+        margin-left: -20vw;
+    }
+}
+
+@media (max-width: 1100px){
+    .top-container{
+        height: 600px;
     }
 }
 

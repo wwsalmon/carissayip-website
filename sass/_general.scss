@@ -8,6 +8,7 @@ $medblue: #0F4880;
 $darkblue: #0A3055;
 $slate: #34515E;
 
+$top-container-height: 964px;
 $banner-scale: 1.2;
 $banner-width: 300px * $banner-scale;
 $banner-height: 80px * $banner-scale;
@@ -16,6 +17,14 @@ $banner-right-font: 16px * $banner-scale;
 $banner-right-padding: 17px * $banner-scale;
 $banner-main-font-size: 18px * $banner-scale;
 $banner-small-font-size: 12px * $banner-scale;
+$banner-offset: 90px;
+$hero-scale: 1.0;
+$hero-top-margin: 64px;
+$hero-compact-offset: 90px;
+
+$main-item-width: 800px;
+$main-bottom: 120px;
+$main-offset: 180px;
 
 $fullwidth: 1500px;
 
@@ -60,6 +69,11 @@ img{
   .kenzap-members > div{
     margin: 0;
     justify-content: unset;
+  }
+
+  .wp-block-cover{
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 }
 
