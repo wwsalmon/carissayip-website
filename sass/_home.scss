@@ -1,7 +1,14 @@
 .top-container{
     max-width: $fullwidth;
-    margin: 128px auto;
-    background-color: $darkblue;
+    margin: 0 auto;
+    padding: $navbar-height 0;
+    background: linear-gradient(-45deg, $medblue 0%, $darkblue 100%);
+
+    .top-container-inner{
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
 }
 
 .banner-item{
@@ -66,20 +73,18 @@
     .top-container{
         height: 800px;
         position: relative;
-        transform-style: preserve-3d;
     }
 
     .banner-item{
         position: absolute;
+        left: calc(50% - #{$banner-width / 2});
+        top: calc(50% - #{$banner-height / 2});
     }
 }
 
 @media (max-width: 1000px){
     .banner-item{
-        margin-top: 32px;
-        left: calc(50% - #{$banner-width / 2})!important;
-        top: unset!important;
-        right: unset!important;
-        bottom: unset!important;
+        margin: 32px 0 0 0!important;
+        left: calc(50% - #{$banner-width / 2});
     }
 }
