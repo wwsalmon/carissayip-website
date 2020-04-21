@@ -1,0 +1,178 @@
+@mixin spaced-link{
+  font-family: 'Rubik';
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: $lightblue;
+  text-transform: uppercase;
+}
+
+@mixin nice-gradient{
+  height: 8px;
+  background: linear-gradient(90deg, $lightblue, $darkblue);
+}
+
+@mixin full-width{
+  width: calc(100% + 48px);
+  position: relative;
+  left: -24px;
+  max-width: unset;
+}
+
+.blog-hero{
+  margin-top: 84px;
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(180deg, $darkblue, $teal);
+
+  &.blog-home{
+    height: 120px;
+  }
+
+  .post-back{
+    @include spaced-link;
+  }
+
+  h1{
+    font-family: 'Spectral';
+    font-weight: 800;
+    line-height: 0.9;
+    margin: 24px 0;
+  }
+}
+
+.blog-container{
+  padding-top: 0;
+  margin-top: -38px;
+
+  .first-post-container{
+    padding-top: 4px;
+    position: relative;
+
+    &:before{
+      @include nice-gradient;
+      width: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .post-top{
+    @include nice-gradient;
+    width: 128px;
+    margin: 64px 0 32px 0;
+  }
+
+  .post-image{
+    margin-top: 32px;
+    @include full-width;
+  }
+
+  .latest-post{
+    @include spaced-link;
+    color: #fff;
+    margin-bottom: 11px;
+  }
+
+  a h1{
+    color: #000;
+    font-family: 'Spectral';
+    font-size: 36px;
+    line-height: 1.0;
+    font-weight: 800;
+  }
+
+  .post-more{
+    @include spaced-link;
+    margin-top: 16px;
+    text-align: right;
+  }
+}
+
+.single-container{
+  margin-top: 0;
+  padding-top: 0;
+
+  figure.wp-block-image{
+    margin: 32px 0;
+    @include full-width;
+
+    &:first-of-type{
+      margin: 0 0 64px 0;
+      box-shadow: -3px 3px 20px 0 rgba(0,0,0,0.2);
+    }
+  }
+}
+
+@media (min-width: 848px){
+  .blog-hero{
+    padding-bottom: 100px;
+
+    &.blog-home{
+      height: 300px;
+    }
+
+    h1{
+      font-size: 84px;
+    }
+  }
+
+  .single-container{
+    margin-top: 0;
+
+    &.imagefirst{
+      margin-top: -84px;
+    }
+  }
+
+  .blog-container{
+    margin-top: -350px;
+
+    a h1{
+      font-size: 48px;
+    }
+
+    .latest-post{
+      margin-bottom: 32px;
+    }
+  }
+
+  .first-post-container{
+    @include full-width;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: -3px 3px 20px 0 rgba(0,0,0,0.2);
+    padding: 4px 24px 0 24px;
+    transition: all 0.2s ease;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+
+    a h1{
+      font-size: 60px;
+      margin: 24px 0;
+    }
+
+    .post-more{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 848px){
+  .blog-container{
+    a h1{
+      margin: 28px 0 12px 0;
+    }
+
+    .first-post-container:before{
+      @include full-width;
+      position: absolute;
+    }
+  }
+
+}
+
