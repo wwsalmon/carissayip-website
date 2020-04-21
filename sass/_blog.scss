@@ -62,7 +62,7 @@
   .post-top{
     @include nice-gradient;
     width: 128px;
-    margin: 64px 0 32px 0;
+    margin: 96px 0 32px 0;
   }
 
   .post-image{
@@ -132,6 +132,7 @@
 
     a h1{
       font-size: 48px;
+      margin: 48px 0 12px 0;
     }
 
     .latest-post{
@@ -153,7 +154,7 @@
 
     a h1{
       font-size: 60px;
-      margin: 24px 0;
+      margin: 36px 0 16px 0;
     }
 
     .post-more{
