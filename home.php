@@ -23,7 +23,10 @@
             <div class="post-top"></div>
             <a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
             <div class="post-date"><span><?php the_time("F d, Y"); ?></span></div>
-            <div class="post-image"><img src="<?php echo catch_that_image(get_the_ID()); ?>"/></div>
+            <div class="post-content <?php if (catch_that_image(get_the_ID())){ echo "post-with-image"; } ?>">
+                <div class="post-text"><p><?php echo get_snippet(sz_stripall(get_the_content()), 60) . "..." ?></p></div>
+                <div class="post-image"><img src="<?php echo catch_that_image(get_the_ID()); ?>"/></div>
+            </div>
             <div class="post-more"><a href="<?php the_permalink(); ?>">Read More ></a></div>
             <?php
         }

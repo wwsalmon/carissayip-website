@@ -57,17 +57,17 @@
       top: 0;
       left: 0;
     }
+
+    .post-image{
+      margin-top: 32px;
+      @include full-width;
+    }
   }
 
   .post-top{
     @include nice-gradient;
     width: 128px;
     margin: 96px 0 32px 0;
-  }
-
-  .post-image{
-    margin-top: 32px;
-    @include full-width;
   }
 
   .latest-post{
@@ -138,6 +138,28 @@
     .latest-post{
       margin-bottom: 32px;
     }
+
+    .post-content{
+      margin-top: 24px;
+
+      &.post-with-image {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .post-text{
+        opacity: 0.4;
+        flex: 468px 0 0;
+
+        p{
+          margin-top: 0;
+        }
+      }
+
+      .post-image{
+        flex: 300px 0 0;
+      }
+    }
   }
 
   .first-post-container{
@@ -175,5 +197,13 @@
     }
   }
 
+  .post-text{
+    display: none;
+  }
+
+  .post-image{
+    margin-top: 32px;
+    @include full-width;
+  }
 }
 
