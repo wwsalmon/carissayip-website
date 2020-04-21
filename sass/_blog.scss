@@ -108,7 +108,10 @@
 
 @media (min-width: 848px){
   .blog-hero{
-    padding-bottom: 100px;
+
+    &.imagefirst{
+      padding-bottom: 100px;
+    }
 
     &.blog-home{
       height: 300px;
@@ -120,7 +123,7 @@
   }
 
   .single-container{
-    margin-top: 0;
+    margin-top: 48px;
 
     &.imagefirst{
       margin-top: -84px;
