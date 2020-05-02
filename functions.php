@@ -4,6 +4,8 @@ require('inc/register-menus.php');
 
 require('inc/helper-functions.php');
 
+require('inc/customizer.php');
+
 function cyip_script_enqueue()
 {
     wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/master.css', false, NULL, 'all' );

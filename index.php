@@ -14,7 +14,18 @@ if (is_front_page()) {
                 <span id="hero1">Carissa Yip</span>
             </div>
             <div class="main-item" style="transform: translateZ(-40px);">
-                <img src="<?php echo get_template_directory_uri() . "/img/csmonitor-cyip.jpg"; ?>">
+                <img src="<?php
+                function cyip_get_home_image(){
+                    $imageID = get_theme_mod("cyip-home-image", -1);
+                    if ($imageID > -1){
+                        return wp_get_attachment_url($imageID);
+                    }
+                    else{
+                        return get_template_directory_uri() . "/img/csmonitor-cyip.jpg";
+                    }
+                }
+                echo cyip_get_home_image();
+                ?>">
             </div>
             <div class='banner-item' id='item1'>
                 <div class="banner-item-back"></div>
