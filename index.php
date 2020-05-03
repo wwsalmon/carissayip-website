@@ -27,35 +27,17 @@ if (is_front_page()) {
                 echo cyip_get_home_image();
                 ?>">
             </div>
-            <div class='banner-item' id='item1'>
-                <div class="banner-item-back"></div>
-                <div class='banner-item-inner' style="transform: translateZ(80px);">
-                    <div class='banner-item-left'><span>#1</span></div>
-                    <div class='banner-item-right'>
-                        <span class='banner-main'>Rated U18 American<br/>Female Chess Player<br/></span>
-                        <!--                    <span class='banner-small'>Since September 2019</span>-->
-                    </div>
-                </div>
-            </div>
-            <div class='banner-item' id='item2'>
-                <div class="banner-item-back"></div>
-                <div class='banner-item-inner' style="transform: translateZ(20px);">
-                    <div class='banner-item-left'><span>#3</span></div>
-                    <div class='banner-item-right'>
-                        <span class='banner-main'>Rated American<br/>Female Chess Player<br/></span>
-                        <!--                    <span class='banner-small'>Since September 2019</span>-->
-                    </div>
-                </div>
-            </div>
-            <div class='banner-item' id='item3'>
-                <div class="banner-item-back"></div>
-                <div class='banner-item-inner' style="transform: translateZ(40px);">
-                    <div class='banner-item-right'>
-                        <span class='banner-main'>Youngest Female Ever to<br/>Beat a Grandmaster<br/></span>
-                        <span class='banner-small'>August 2014 v. Ivanov, at the age of 10</span>
-                    </div>
-                </div>
-            </div>
+            <?php
+            $bannernum = 1;
+            $bannerdepth = 80;
+            include "template_parts/banner-item.php";
+            $bannernum = 2;
+            $bannerdepth = 20;
+            include "template_parts/banner-item.php";
+            $bannernum = 3;
+            $bannerdepth = 40;
+            include "template_parts/banner-item.php";
+            ?>
         </div>
     </div>
 
